@@ -11,4 +11,5 @@ export_env_dir $env_dir
 cd $build_dir
 
 head "Building webpack bundle"
-NODE_ENV=production $(npm bin)/webpack -p --config webpack.prod.config.js
+export PATH="$HOME/.node/bin:$PATH"
+$(npm bin)/webpack -p --config webpack.prod.config.js
